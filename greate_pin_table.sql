@@ -1,0 +1,18 @@
+CREATE TABLE `table` (
+`keywords_md5` CHAR (32) NOT NULL,
+`file_name`  MEDIUMINT NOT NULL AUTO_INCREMENT,
+`id` VARCHAR (70) NULL,
+`method` VARCHAR (50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
+`domain` VARCHAR (255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
+`link` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
+`description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
+`origin` VARCHAR (255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
+`width` INT (20) NULL,
+`height` INT (20) NULL,
+`greate` TIMESTAMP NULL,
+`repin_count` INT (20) NULL,
+`is_repin` VARCHAR (20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
+`parent_id` VARCHAR (70) NULL,
+`status` INT (3) NULL DEFAULT 0,
+`timestamp` TIMESTAMP NULL ON UPDATE CURRENT_TIMESTAMP,
+PRIMARY KEY (`keywords_md5`,`file_name`)) ENGINE=MyISAM;
